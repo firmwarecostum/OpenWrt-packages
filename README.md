@@ -1,7 +1,12 @@
-# yoursunny OpenWrt packages
+# yoursunny OpenWrt Packages
 
 These are my OpenWrt packages.
 I use them with [Onion Omega2 Pro](https://onion.io/store/omega2-pro/) device.
+
+Categories:
+
+* [named-data]: Named Data Networking software
+* [onion]: packages specifically for Onion Omega2 Pro device
 
 ## Installation
 
@@ -20,14 +25,16 @@ I use them with [Onion Omega2 Pro](https://onion.io/store/omega2-pro/) device.
 
     If I have published or updated a package, you'll need to repeat this step to pull my changes.
 
-4.  Select packages to compile:
+4.  Have a look at the README in category or package directory, which may contain additional instructions.
+
+5.  Select packages to compile:
 
         make menuconfig
 
     First choose the correct target system according to your device.
     Then, find the package you need in the menu, and press `M` key to mark `<M>` for compiling as a `.ipk` module.
 
-5.  Compile a package:
+6.  Compile a package:
 
         make V=sc package/PKGNAME/compile
 
@@ -35,4 +42,4 @@ I use them with [Onion Omega2 Pro](https://onion.io/store/omega2-pro/) device.
 
     If successful, the result should be in `bin/packages/ARCH/yoursunny/*.ipk`.
 
-6.  Copy `.ipk` files to the device, and install them with [opkg](https://openwrt.org/docs/guide-user/additional-software/opkg).
+7.  Copy `.ipk` files to the device, and install them with [opkg](https://openwrt.org/docs/guide-user/additional-software/opkg).

@@ -1,0 +1,11 @@
+--- a/tools/nfd-status-http-server-files/nfd-status.xsl
++++ b/tools/nfd-status-http-server-files/nfd-status.xsl
+@@ -7,7 +7,7 @@
+   <html>
+   <head>
+     <title>NFD Status</title>
+-    <link rel="stylesheet" type="text/css" href="style.css" />
++    <link rel="stylesheet" type="text/css" href="/nfd-status-static/style.css" />
+   </head>
+   <body>
+   <header>

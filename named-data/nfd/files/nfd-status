@@ -1,0 +1,13 @@
+#!/bin/sh
+XML=$(nfdc status report xml)
+if [[ $? -ne 0 ]]; then
+  echo 'Status: 503 NFD is not running'
+  echo 'Content-Type: text/plain'
+  echo
+  echo 'NFD is not running'
+  exit
+fi
+echo 'Content-Type: text/xml'
+echo
+echo $XML | sed 's|<nfdStatus |<?xml-stylesheet type="text/xsl" href="/nfd-status-static/nfd-status.xsl"?>\0|'
+

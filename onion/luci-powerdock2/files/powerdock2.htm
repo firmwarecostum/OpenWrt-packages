@@ -1,0 +1,14 @@
+<%-
+	require "string"
+	require "luci.sys"
+	local powerdock2_output = luci.sys.exec("power-dock2")
+  powerdock2_output = string.gsub(powerdock2_output, "Battery Voltage Level: ", "")
+-%>
+
+<div class="cbi-section">
+	<h3><%:Omega2 - Power Dock%></h3>
+
+	<div class="table" width="100%">
+		<div class="tr"><div class="td left" width="33%"><%:Battery Voltage Level%></div><div class="td left" id="powerdock2_output"><%=powerdock2_output%></div></div>
+	</div>
+</div>

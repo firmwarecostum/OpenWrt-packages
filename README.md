@@ -5,8 +5,8 @@ I use them with [Onion Omega2 Pro](https://onion.io/store/omega2-pro/) device.
 
 Categories:
 
-* [named-data]: Named Data Networking software
-* [onion]: packages specifically for Onion Omega2 Pro device
+* [named-data](named-data/): Named Data Networking software
+* [onion](onion/): packages specifically for Onion Omega2 Pro device
 
 ## Installation
 

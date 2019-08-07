@@ -1,0 +1,43 @@
+if uci show nfd &>/dev/null; then
+  exit 0
+fi
+
+echo | uci import nfd
+uci batch -q >/dev/null <<EOT
+  set nfd.cs=cs
+  set nfd.cs.capacity=1024
+  set nfd.cs.policy=lru
+
+  set nfd.rib=rib
+  set nfd.rib.lockdown_localhost=1
+  set nfd.rib.propagate=0
+  set nfd.rib.propagate_refresh=300
+
+  set nfd.face_system=face_system
+  set nfd.face_system.ether_listen=0
+  set nfd.face_system.ether_mcast=1
+  set nfd.face_system.udp_listen=1
+  set nfd.face_system.udp_mcast=1
+  set nfd.face_system.tcp_listen=1
+  set nfd.face_system.ws_listen=1
+
+  set nfd.strategy_default=strategy
+  set nfd.strategy_default.prefix=/
+  set nfd.strategy_default.strategy=self-learning
+  set nfd.strategy_default.version=1
+
+  set nfd.strategy_localhost=strategy
+  set nfd.strategy_localhost.prefix=/localhost
+  set nfd.strategy_localhost.strategy=multicast
+
+  set nfd.strategy_localhop=strategy
+  rename nfd.@strategy[-1]=strategy_localhop
+  set nfd.strategy_localhop.prefix=/localhop
+  set nfd.strategy_localhop.strategy=multicast
+
+  set nfd.face_autoconfig=face
+  set nfd.face_autoconfig.use_autoconfig=1
+  set nfd.face_autoconfig.fch_server=http://ndn-fch.named-data.net/
+EOT
+uci commit nfd
+

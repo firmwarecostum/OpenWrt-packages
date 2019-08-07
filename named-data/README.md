@@ -28,6 +28,7 @@ They come without configuration or service registration.
 **Script packages** provide configuration and scripts.
 They allow running binaries as services, configured via [the UCI system](https://openwrt.org/docs/guide-user/base-system/uci).
 
+* nfd-service
 * nfd-status-http
 
 **LuCI packages** integrate NDN software with [LuCI web interface](https://openwrt.org/docs/techref/luci).

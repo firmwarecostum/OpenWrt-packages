@@ -14,7 +14,7 @@ define Package/nfd-service
 	CATEGORY:=Network
 	SUBMENU:=Named Data Networking
 	TITLE:=NFD system service
-	EXTRA_DEPENDS:=infoedit libuci-lua luci-base ndn-autoconfig nfd
+	EXTRA_DEPENDS:=infoedit, libuci-lua, luci-base, ndn-autoconfig, nfd
 	PKGARCH:=all
 endef
 

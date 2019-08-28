@@ -15,7 +15,7 @@ define Package/luci-powerdock2
 	SUBMENU:=Onion
 	TITLE:=luci-powerdock2
 	DEPENDS:=@TARGET_ramips_mt76x8_DEVICE_omega2p
-	EXTRA_DEPENDS:=i2c-tools kmod-i2c-mt7628 luci-mod-admin-full power-dock2
+	EXTRA_DEPENDS:=i2c-tools, kmod-i2c-mt7628, luci-mod-admin-full, power-dock2
 endef
 
 define Package/luci-powerdock2/description

@@ -58,7 +58,7 @@ define Package/nfd-status-http
 	CATEGORY:=Network
 	SUBMENU:=Named Data Networking
 	TITLE:=NFD status page
-	EXTRA_DEPENDS:=nfd uhttpd
+	EXTRA_DEPENDS:=nfd, uhttpd
 endef
 
 define Package/nfd-status-http/description

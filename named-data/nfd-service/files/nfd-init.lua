@@ -64,7 +64,7 @@ x:foreach("nfd", "face_system", function(s)
   local brctlProcess = io.popen("brctl show | awk 'NF==4||NF==1 { print $NF }'")
   local blacklist = brctlProcess:read("*a"):split("\n")
   brctlProcess:close()
-  local i = 1, #blacklist-1 do
+  for i = 1, #blacklist-1 do
     confedit("-p face_system.ether.blacklist.ifname -v " .. blacklist[i])
     confedit("-p face_system.udp.blacklist.ifname -v " .. blacklist[i])
   end

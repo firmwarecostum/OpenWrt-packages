@@ -17,7 +17,7 @@ uci batch -q >/dev/null <<EOT
   set nfd.face_system.ether_listen=0
   set nfd.face_system.ether_mcast=1
   set nfd.face_system.udp_listen=1
-  set nfd.face_system.udp_mcast=1
+  set nfd.face_system.udp_mcast=0
   set nfd.face_system.tcp_listen=1
   set nfd.face_system.ws_listen=1
 

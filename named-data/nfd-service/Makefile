@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nfd-service
-PKG_VERSION:=0.0.20190827
+PKG_VERSION:=0.0.20190908
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk

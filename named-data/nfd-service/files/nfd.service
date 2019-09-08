@@ -13,7 +13,6 @@ EXTRA_HELP='
             Optionally "save" to UCI (need "uci commit" manually).
 '
 
-CONFIGFILE=/etc/config/nfd
 NFDCONFDIR=/var/etc/ndn
 NFDCONFFILE=$NFDCONFDIR/nfd.conf
 LUAHELPER='lua /usr/lib/lua/named-data/nfd-init.lua'
@@ -45,7 +44,6 @@ start_service() {
   procd_set_param command /usr/bin/nfd -c $NFDCONFFILE
   procd_set_param env HOME=$HOME
   procd_set_param respawn 300 5 5
-  procd_set_param file $CONFIGFILE
   procd_set_param stderr 1
   procd_close_instance
 }
@@ -62,6 +60,11 @@ service_started() {
 
   $LUAHELPER | sed -n '/INITCMD/ s|INITCMD ||p' \
   | sh 2>&1 | logger -s -t nfd-init -p daemon.notice
+}
+
+service_triggers()
+{
+  procd_add_reload_trigger "nfd"
 }
 
 authorize() {

@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nfd
-PKG_VERSION:=0.6.6
+PKG_VERSION:=0.6.6-47-g5a89769
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://gerrit.named-data.net/NFD
-PKG_SOURCE_VERSION:=NFD-$(PKG_VERSION)
+PKG_SOURCE_VERSION:=5a897699cff77ef3739e14e52b9f923ccd54b2bc
 
 include $(INCLUDE_DIR)/package.mk
 

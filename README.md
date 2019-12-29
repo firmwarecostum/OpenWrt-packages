@@ -10,36 +10,40 @@ Categories:
 
 ## Installation
 
-1.  Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-18.06`.
+1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-18.06`.
 
-2.  Create `feeds.conf` in OpenWrt directory, and paste the following:
+2. Create `feeds.conf` in OpenWrt directory, and paste the following:
 
         src-git yoursunny https://github.com/yoursunny/OpenWrt-packages.git
 
-    This enables OpenWrt build system to find my packages.
+   Alternatively, if this repository has been cloned locally, use something like:
 
-3.  Update feeds and enable my packages:
+        src-link yoursunny /path/to/yoursunny/OpenWrt-packages
+
+   This enables OpenWrt build system to find my packages.
+
+3. Update feeds and enable my packages:
 
         ./scripts/feeds update -a
         ./scripts/feeds install -a -p yoursunny
 
-    If I have published or updated a package, you'll need to repeat this step to pull my changes.
+   If I have published or updated a package, you'll need to repeat this step to pull my changes.
 
-4.  Have a look at the README in category or package directory, which may contain additional instructions.
+4. Have a look at the README in category or package directory, which may contain additional instructions.
 
-5.  Select packages to compile:
+5. Select packages to compile:
 
         make menuconfig
 
-    First choose the correct target system according to your device.
-    Then, find the package you need in the menu, and press `M` key to mark `<M>` for compiling as a `.ipk` module.
+   First choose the correct target system according to your device.
+   Then, find the package you need in the menu, and press `M` key to mark `<M>` for compiling as a `.ipk` module.
 
-6.  Compile a package:
+6. Compile a package:
 
         make V=sc package/PKGNAME/compile
 
-    Substitute `PKGNAME` with a package name in this repository.
+   Substitute `PKGNAME` with a package name in this repository.
 
-    If successful, the result should be in `bin/packages/ARCH/yoursunny/*.ipk`.
+   If successful, the result should be in `bin/packages/ARCH/yoursunny/*.ipk`.
 
-7.  Copy `.ipk` files to the device, and install them with [opkg](https://openwrt.org/docs/guide-user/additional-software/opkg).
+7. Copy `.ipk` files to the device, and install them with [opkg](https://openwrt.org/docs/guide-user/additional-software/opkg).

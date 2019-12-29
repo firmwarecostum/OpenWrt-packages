@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ndn-tools
-PKG_VERSION:=0.6.4
+PKG_VERSION:=0.6.4-31-ga8600b0
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://gerrit.named-data.net/ndn-tools
-PKG_SOURCE_VERSION:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_SOURCE_VERSION:=a8600b0a6a0fc7d5ea06b75515fb3a55795e70f4
 
 include $(INCLUDE_DIR)/package.mk
 

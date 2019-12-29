@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ndn6-tools
-PKG_VERSION:=0.0.20190803
+PKG_VERSION:=0.0.20190810
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/yoursunny/ndn6-tools.git
-PKG_SOURCE_VERSION:=f155042e1b701e8b97207574ccd252f47c06f859
+PKG_SOURCE_VERSION:=b5fccaf22266252ce07f7ec0ebb0b439a8421279
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -63,6 +63,24 @@ define Package/ndn6-serve-certs/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/serve-certs $(1)/usr/bin/ndn6-serve-certs
 endef
 
+define Package/ndn6-unix-time-service
+	SECTION:=net
+	CATEGORY:=Network
+	SUBMENU:=Named Data Networking
+	TITLE:=ndn6-unix-time-service
+	DEPENDS:=+libndn-cxx
+endef
+
+define Package/ndn6-unix-time-service/description
+	answer queries of current Unix timestamp
+endef
+
+define Package/ndn6-unix-time-service/install
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/unix-time-service $(1)/usr/bin/ndn6-unix-time-service
+endef
+
 $(eval $(call BuildPackage,ndn6-file-server))
 $(eval $(call BuildPackage,ndn6-register-prefix-cmd))
 $(eval $(call BuildPackage,ndn6-serve-certs))
+$(eval $(call BuildPackage,ndn6-unix-time-service))

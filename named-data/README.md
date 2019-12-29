@@ -24,6 +24,7 @@ They come without configuration or service registration.
 * ndn6-file-server
 * ndn6-register-prefix-cmd
 * ndn6-serve-certs
+* ndn6-unix-time-service
 
 **Script packages** provide configuration and scripts.
 They allow running binaries as services, configured via [the UCI system](https://openwrt.org/docs/guide-user/base-system/uci).
@@ -33,4 +34,4 @@ They allow running binaries as services, configured via [the UCI system](https:/
 
 **LuCI packages** integrate NDN software with [LuCI web interface](https://openwrt.org/docs/techref/luci).
 
-* (none at this time)
+* nfd-luci

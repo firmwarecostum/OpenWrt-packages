@@ -10,13 +10,13 @@ Categories:
 
 ## Installation
 
-1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-18.06`.
+1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-19.07`.
 
-2. Create `feeds.conf` in OpenWrt directory, and paste the following:
+2. Copy `feeds.conf.default` to `feeds.conf`, and append the following:
 
         src-git yoursunny https://github.com/yoursunny/OpenWrt-packages.git
 
-   Alternatively, if this repository has been cloned locally, use something like:
+   Alternatively, if this repository has been cloned locally, use something like (must be absolute path):
 
         src-link yoursunny /path/to/yoursunny/OpenWrt-packages
 
@@ -25,9 +25,12 @@ Categories:
 3. Update feeds and enable my packages:
 
         ./scripts/feeds update -a
-        ./scripts/feeds install -a -p yoursunny
+        ./scripts/feeds install -a
 
-   If I have published or updated a package, you'll need to repeat this step to pull my changes.
+   If I have published or updated a package, run the following commands to pull the latest changes:
+
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a -p yoursunny
 
 4. Have a look at the README in category or package directory, which may contain additional instructions.
 
@@ -37,6 +40,10 @@ Categories:
 
    First choose the correct target system according to your device.
    Then, find the package you need in the menu, and press `M` key to mark `<M>` for compiling as a `.ipk` module.
+
+   If it's your first time building for a target system, install the toolchain for this architecture:
+
+        make toolchain/install
 
 6. Compile a package:
 

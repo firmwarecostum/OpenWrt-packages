@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nfd-luci
 PKG_VERSION:=0.0.20190908
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/9th-ndn-hackathon/NFD-LuCI.git
@@ -18,7 +18,7 @@ define Package/nfd-luci
 	CATEGORY:=Network
 	SUBMENU:=Named Data Networking
 	TITLE:=NDN LuCI Integration
-	EXTRA_DEPENDS:=luci-lib-json, nfd-service, nfd-status-http
+	EXTRA_DEPENDS:=luci-compat, luci-lib-json, nfd-service, nfd-status-http
 	PKGARCH:=all
 endef
 

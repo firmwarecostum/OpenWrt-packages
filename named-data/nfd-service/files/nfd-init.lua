@@ -39,7 +39,7 @@ x:foreach("nfd", "strategy", function(s)
 end)
 
 x:foreach("nfd", "face_system", function(s)
-  confedit("-s face_system.unix -v ''")
+  confedit("-s face_system.unix.path -v /var/run/nfd.sock")
 
   confedit("-s face_system.ether.listen -v " .. asYesNo(s["ether_listen"]))
   confedit("-s face_system.ether.mcast -v " .. asYesNo(s["ether_mcast"]))

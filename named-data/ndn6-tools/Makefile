@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ndn6-tools
-PKG_VERSION:=0.0.20190810
-PKG_RELEASE:=2
+PKG_VERSION:=0.0.20200226
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/yoursunny/ndn6-tools.git
-PKG_SOURCE_VERSION:=b5fccaf22266252ce07f7ec0ebb0b439a8421279
+PKG_SOURCE_VERSION:=7d476edcb90204e6ba1206f71e8f0fde728af9eb
 
 include $(INCLUDE_DIR)/package.mk
 

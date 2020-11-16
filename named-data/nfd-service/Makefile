@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nfd-service
-PKG_VERSION:=0.0.20190908
+PKG_VERSION:=0.0.20201115
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
@@ -23,6 +23,8 @@ define Package/nfd-service/description
 endef
 
 define Package/nfd-service/install
+	$(INSTALL_DIR) $(1)/etc/ndn
+	$(INSTALL_BIN) ./files/client.conf $(1)/etc/ndn/client.conf
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/nfd.service $(1)/etc/init.d/nfd
 	$(INSTALL_DIR) $(1)/etc/uci-defaults

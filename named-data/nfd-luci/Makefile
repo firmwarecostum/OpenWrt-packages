@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nfd-luci
-PKG_VERSION:=0.0.20190908
-PKG_RELEASE:=2
+PKG_VERSION:=0.0.20201115
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/9th-ndn-hackathon/NFD-LuCI.git
-PKG_SOURCE_VERSION:=c02b730ce9b340f5a69ade67ab1a5ffc709e36be
+PKG_SOURCE_VERSION:=dfb39caed024bdcc03ae9ac5c788adc2438c3fd7
 
 include $(INCLUDE_DIR)/package.mk
 

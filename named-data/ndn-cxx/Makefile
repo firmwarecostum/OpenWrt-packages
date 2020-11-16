@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ndn-cxx
-PKG_VERSION:=0.7.0
+PKG_VERSION:=0.7.1
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://gerrit.named-data.net/ndn-cxx
-PKG_SOURCE_VERSION:=cf8ffd495a51fc9a1fecc9ee20b4a5a82dcbd850
+PKG_SOURCE_URL:=https://github.com/named-data/ndn-cxx.git
+PKG_SOURCE_VERSION:=bdfb53aa09be3b0095b5392c0c24bef23c291e2f
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -29,7 +29,7 @@ define Package/libndn-cxx
 	CATEGORY:=Network
 	SUBMENU:=Named Data Networking
 	TITLE:=ndn-cxx
-	DEPENDS:=+boost +boost-chrono +boost-date_time +boost-filesystem +boost-log +boost-program_options +boost-system +boost-thread +libopenssl +libsqlite3
+	DEPENDS:=+boost +boost-chrono +boost-date_time +boost-filesystem +boost-log +boost-program_options +boost-system +boost-thread +libatomic +libopenssl +libsqlite3
 	ABI_VERSION:=$(PKG_VERSION)
 endef
 

@@ -7,6 +7,7 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/named-data/ndn-cxx.git
 PKG_SOURCE_VERSION:=bdfb53aa09be3b0095b5392c0c24bef23c291e2f
+PKG_MIRROR_HASH:=5d813272e7df3d9e97e783f3c0b2fd1e694a4db693d46a2812ef88be65007b12
 
 include $(INCLUDE_DIR)/package.mk
 

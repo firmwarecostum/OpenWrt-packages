@@ -7,6 +7,7 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/named-data/ndn-tools.git
 PKG_SOURCE_VERSION:=374f4e47b57bc41b4fca4887518c39f5c165cdaa
+PKG_MIRROR_HASH:=95f2426b1e58a99a31518e99a071bffba53bd3a895a8f4fb9863314fd909d408
 
 include $(INCLUDE_DIR)/package.mk
 

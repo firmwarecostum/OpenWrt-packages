@@ -7,6 +7,7 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/NDN-Routing/infoedit.git
 PKG_SOURCE_VERSION:=5e88552933fc45a9beef8d459cfa984e47689f13
+PKG_MIRROR_HASH:=1bcd33eef38fe4ccde0cfba0d9784c1e958c3d3a4f78acee41e518091edbdc24
 
 include $(INCLUDE_DIR)/package.mk
 

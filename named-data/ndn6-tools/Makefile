@@ -7,6 +7,7 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/yoursunny/ndn6-tools.git
 PKG_SOURCE_VERSION:=7d476edcb90204e6ba1206f71e8f0fde728af9eb
+PKG_MIRROR_HASH:=514a21d6b11332509db372b53cf422f0c0325e3151db67e96ba7781cf90fbd51
 
 include $(INCLUDE_DIR)/package.mk
 

@@ -7,6 +7,7 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/9th-ndn-hackathon/NFD-LuCI.git
 PKG_SOURCE_VERSION:=dfb39caed024bdcc03ae9ac5c788adc2438c3fd7
+PKG_MIRROR_HASH:=c85a59e5364948bd8b5dbcf0c78388259957167079eb42e6d0d97c8a2ee70fe0
 
 include $(INCLUDE_DIR)/package.mk
 

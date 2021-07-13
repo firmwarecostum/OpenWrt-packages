@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ndn6-tools
-PKG_VERSION:=0.0.20200226
+PKG_VERSION:=0.0.20210627
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/yoursunny/ndn6-tools.git
-PKG_SOURCE_VERSION:=7d476edcb90204e6ba1206f71e8f0fde728af9eb
-PKG_MIRROR_HASH:=514a21d6b11332509db372b53cf422f0c0325e3151db67e96ba7781cf90fbd51
+PKG_SOURCE_VERSION:=bb5a43866beb5e8f233e57cde30d8632b10162c6
+PKG_MIRROR_HASH:=c059cd5ed5e2607b4678863d5384f8bcdecfa66d04b84cd7585dc61005c5fa42
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -28,6 +28,23 @@ endef
 define Package/ndn6-file-server/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/file-server $(1)/usr/bin/ndn6-file-server
+endef
+
+define Package/ndn6-prefix-proxy
+	SECTION:=net
+	CATEGORY:=Network
+	SUBMENU:=Named Data Networking
+	TITLE:=ndn6-prefix-proxy
+	DEPENDS:=+libndn-cxx
+endef
+
+define Package/ndn6-prefix-proxy/description
+	handle prefix registration command with prefix confinement
+endef
+
+define Package/ndn6-prefix-proxy/install
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/prefix-proxy $(1)/usr/bin/ndn6-prefix-proxy
 endef
 
 define Package/ndn6-register-prefix-cmd
@@ -82,6 +99,7 @@ define Package/ndn6-unix-time-service/install
 endef
 
 $(eval $(call BuildPackage,ndn6-file-server))
+$(eval $(call BuildPackage,ndn6-prefix-proxy))
 $(eval $(call BuildPackage,ndn6-register-prefix-cmd))
 $(eval $(call BuildPackage,ndn6-serve-certs))
 $(eval $(call BuildPackage,ndn6-unix-time-service))

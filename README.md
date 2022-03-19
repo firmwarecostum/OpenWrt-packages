@@ -10,7 +10,7 @@ Categories:
 
 ## Installation
 
-1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-19.07` or `openwrt-21.02`.
+1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-21.02`.
 
 2. Copy `feeds.conf.default` to `feeds.conf`, and append the following:
 

@@ -40,4 +40,3 @@ uci batch -q >/dev/null <<EOT
   set nfd.face_autoconfig.fch_server=http://ndn-fch.named-data.net/
 EOT
 uci commit nfd
-

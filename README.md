@@ -10,7 +10,7 @@ Categories:
 
 ## Installation
 
-1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-21.02`.
+1. Install [OpenWrt build system](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem), branch `openwrt-22.03`.
 
 2. Copy `feeds.conf.default` to `feeds.conf`, and append the following:
 
@@ -25,6 +25,8 @@ Categories:
    ```
 
    This enables OpenWrt build system to find my packages.
+
+   If you switched branches in the main OpenWrt repository, be sure to delete and re-create `feeds.conf` file so that they point to the correct branch.
 
 3. Update feeds and enable my packages:
 

@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=infoedit
-PKG_VERSION:=0.0.20210127
+PKG_VERSION:=0.0.20221229
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/NDN-Routing/infoedit.git
-PKG_SOURCE_VERSION:=3226bdce4a225328df177840280f76ec81091176
-PKG_MIRROR_HASH:=381b78b2f7afc025ccb53ef55b8890d6c5745e3905c83dc8bd7e7fef206e7c77
+PKG_SOURCE_VERSION:=cecfe583f5d2df974f5cbd50996f91b9d321be99
+PKG_MIRROR_HASH:=0939c3e9708f34c8a14c31a913143ada30cfdd220fcd00dc246bc2008f630a11
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -20,7 +20,7 @@ define Package/infoedit
 endef
 
 define Package/infoedit/description
-	A tool used to edit NFD configuration files
+	Command Line Tools for Boost INFO Format
 endef
 
 define Package/infoedit/install

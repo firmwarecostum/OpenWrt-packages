@@ -62,8 +62,7 @@ service_started() {
   | sh 2>&1 | logger -s -t nfd-init -p daemon.notice
 }
 
-service_triggers()
-{
+service_triggers() {
   procd_add_reload_trigger "nfd"
 }
 

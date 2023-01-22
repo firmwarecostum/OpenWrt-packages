@@ -1,6 +1,6 @@
 # yoursunny OpenWrt Packages of Named Data Networking
 
-These are my OpenWrt packages of [Named Data Networking](https://named-data.net/) software.
+These are my OpenWrt packages of [Named Data Networking](https://named-data.net) software.
 They appear in `make menuconfig` at: Network - Named Data Networking.
 
 Compiled binaries are several megabytes large.
@@ -24,6 +24,7 @@ They come without configuration or service registration.
 * ndn6-file-server
 * ndn6-prefix-proxy
 * ndn6-register-prefix-cmd
+* ndn6-register-prefix-remote
 * ndn6-serve-certs
 * ndn6-unix-time-service
 
